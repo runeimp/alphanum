@@ -1,4 +1,4 @@
-AlphaNum v0.1.0
+AlphaNum v0.1.1
 ===============
 
 Simply Go library and command line app to convert 1s based indexes (like you'd use in a program or script for CSV processing) to spreadsheet column letters. Or from spreadsheet type column letters to a 1s based index.
