@@ -10,8 +10,8 @@ import (
 
 const (
 	AppLabel   = AppName + " v" + AppVersion
-	AppName    = "AlphaColumn"
-	AppVersion = "0.1.0"
+	AppName    = "AlphaNum"
+	AppVersion = "0.1.1"
 	CLIName    = "alphanum"
 	helpInfo   = `
 %s [OPTIONS] LETTERS_OR_INDEXES
@@ -47,12 +47,9 @@ func main() {
 		fmt.Println(AppLabel)
 		os.Exit(0)
 	default:
-		// fmt.Fprintf(os.Stderr, "Unknown command or option %q\n", cmd)
 		result := alphanum.ParseSlice(os.Args[1:])
 		for i, arg := range os.Args[1:] {
 			fmt.Printf("%s = %s\n", strings.ToUpper(arg), result[i])
 		}
-		// n := alphanum.ColumnLettersToNumbers(os.Args[1])
-		// fmt.Printf("main() | n: %d\n", n)
 	}
 }
